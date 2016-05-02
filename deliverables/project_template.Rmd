@@ -1,0 +1,101 @@
+---
+title: "Analysis of Simulation Distribution"
+author: "Brady Chiu"
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 4
+    number_sections: true
+  pdf_document:
+    toc: true
+    toc_depth: 4
+    number_sections: true
+---
+
+```{r message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE}
+knitr::read_chunk("../code/main.R")
+```
+```{r setup, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=FALSE}
+```
+```{r functions, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=FALSE}
+```
+
+# Intro
+
+This project investigates the exponential distribution in R and compare it with the Central Limit Theorem. We use the rexp(n, lambda) to generate our distributions, and observe 1000 simulations of 40 samples each with a lambda = 0.2.
+
+We aim to show the following:   
+
+1.  Show the sample mean and compare it to the theoretical mean of the distribution  
+2.  Show how variable the sample is (via variance) and compare it to the theoretical variance of the distribution  
+3.  Show that the distribution is approximately normal  
+
+# Simulation
+
+* We define our simulation paramters  
+```{r parameters, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+
+* We run our simulation  
+
+```{r simulation_result, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+
+# Mean
+
+* We calculate the theoretical and sample means
+
+```{r mean, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+```{r plot_1, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
+```
+
+* Our theoretical and sample means are almost identical  
+
+# Variance
+
+* We calculate the theoretical and sample variances
+
+```{r variance, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+
+* Our theoretical and sample variances are almost identical  
+
+# Distribution
+
+* We show if our distribution is normal  
+
+```{r plot_2, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
+```
+
+* We see a shape very much like a gaussian normal distribution  
+
+```{r plot_3, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
+```
+
+* We see the Quantile-Quantile plot almost mirroring the y=x+b line, with a little skewage  
+
+# Conclusion
+
+Our analysis of 100 simulations of 40 samples each shows that the mean, variance and distrubtion of our sample is roughly equal to that of the population mean, variance, and distribution. This is consistent with the characteristic of the Central Limit Theorem.  
+
+# Code
+```{r setup, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r functions, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r parameters, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r simulation_result, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r mean, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r variance, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r plot_1, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r plot_2, message=FALSE, warning=FALSE, eval=FALSE}
+```
+```{r plot_3, message=FALSE, warning=FALSE, eval=FALSE}
+```
