@@ -1,16 +1,16 @@
 ---
 title: "Analysis of Simulation Distribution"
 author: "Brady Chiu"
-date: May 2, 2016
-output:
-  pdf_document:
-    number_sections: yes
-    toc: yes
-    toc_depth: 4
+date: "`r format(Sys.time(), '%d %B, %Y')`"
+output: 
   html_document:
-    number_sections: yes
-    toc: yes
+    toc: true
     toc_depth: 4
+    number_sections: true
+  pdf_document:
+    toc: true
+    toc_depth: 4
+    number_sections: true
 ---
 
 ```{r message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE}
@@ -48,7 +48,7 @@ We aim to show the following:
 
 ```{r mean, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
 ```
-```{r plot_1, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE, fig.height=4}
+```{r plot_1, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
 ```
 
 * Our theoretical and sample means are almost identical  
@@ -66,12 +66,12 @@ We aim to show the following:
 
 * We show if our distribution is normal  
 
-```{r plot_2, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE, fig.height=4}
+```{r plot_2, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
 ```
 
 * We see a shape very much like a gaussian normal distribution  
 
-```{r plot_3, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE, fig.height=4}
+```{r plot_3, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
 ```
 
 * We see the Quantile-Quantile plot almost mirroring the y=x+b line, with a little skewage  
