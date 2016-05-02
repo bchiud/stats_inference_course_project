@@ -1,0 +1,7 @@
+base
+data.table
+dplyr
+ggplot2
+knitr
+lubridate
+tidyr

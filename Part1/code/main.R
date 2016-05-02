@@ -13,14 +13,14 @@ library(knitr, warn.conflicts=F)
 library(lubridate, warn.conflicts=F)
 library(tidyr, warn.conflicts=F)
 
-# setwd("/Users/bradychiu/Dropbox (Uber Technologies)/R/Coursera/06_Statistical_Inference/stats_inference_course_project")
+# setwd("/Users/bradychiu/Dropbox (Uber Technologies)/R/Coursera/06_Statistical_Inference/stats_inference_course_project/Part1/")
 
 ## @knitr functions
 simulator<-function(n,lambda,simulation_count,seed=1337){
-  set.seed(seed)
-  simulation_means<-data.frame(mean=numeric(simulation_count))
+  set.seed(seed) # make our results repeatable
+  simulation_means<-data.frame(mean=numeric(simulation_count)) # empty data frame to store our 1000 simulations
   for(i in 1:simulation_count){
-    simulation_means[i,]<-mean(rexp(n,lambda))
+    simulation_means[i,]<-mean(rexp(n,lambda)) # get mean for our 1000 simulations of 40 samples each
   }
   simulation_means
 }
@@ -37,12 +37,16 @@ head(simulation_result,10)
 ## @knitr mean
 theoretical_mean<-1/lambda
 sample_mean<-mean(simulation_result$mean)
+
+## @knitr mean_out
 paste("Theoretical Mean:",theoretical_mean)
 paste("Sample Mean:",sample_mean)
 
 ## @knitr variance
-theoretical_variance<-((1/lambda)^2)/simulation_count
+theoretical_variance<-(1/lambda)^2/exponentials
 sample_variance<-var(simulation_result$mean)
+
+## @knitr variance_out
 paste("Theoretical Variance:",theoretical_variance)
 paste("Sample Variance:",sample_variance)
 

@@ -1,7 +1,7 @@
 ---
 title: "Analysis of Simulation Distribution"
 author: "Brady Chiu"
-date: May 2, 2016
+date: "May 2, 2016"
 output:
   pdf_document:
     number_sections: yes
@@ -37,7 +37,7 @@ We aim to show the following:
 ```{r parameters, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
 ```
 
-* We run our simulation  
+* We run our simulation by inputting the parameters above into the rexp(n,lambda) function  
 
 ```{r simulation_result, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
 ```
@@ -47,6 +47,8 @@ We aim to show the following:
 * We calculate the theoretical and sample means
 
 ```{r mean, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+```{r mean_out, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
 ```
 ```{r plot_1, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE, fig.height=4}
 ```
@@ -58,6 +60,8 @@ We aim to show the following:
 * We calculate the theoretical and sample variances
 
 ```{r variance, message=FALSE, warning=FALSE, cache=TRUE, echo=TRUE, include=TRUE}
+```
+```{r variance_out, message=FALSE, warning=FALSE, cache=TRUE, echo=FALSE, include=TRUE}
 ```
 
 * Our theoretical and sample variances are almost identical  
